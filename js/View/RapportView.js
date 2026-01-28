@@ -230,13 +230,3 @@ class RapportView extends View {
     }
 
 }
-
-
-// Initialisation sécurisée
-document.addEventListener('DOMContentLoaded', () => {
-    try {
-        const view = new RapportView(); 
-    } catch (error) {
-        console.error('Erreur lors de l\'initialisation de RapportView:', error);
-    }
-});

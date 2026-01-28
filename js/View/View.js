@@ -217,8 +217,3 @@ class View {
         this.StartTimer();
     }
 }
-
-// Initialisation au chargement
-window.onload = () => {
-    new View();
-};
