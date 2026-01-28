@@ -26,7 +26,7 @@ class View {
     }
 
     redirectToLogin() {
-        window.location = 'login.html';
+        window.location.href = 'login.html';
     }
     // Méthode pour créer le header dynamiquement
     DisplayHeader() {
