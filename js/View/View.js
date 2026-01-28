@@ -4,7 +4,7 @@ class View {
         const token = sessionStorage.getItem("token");
 
         // Si pas de token et pas sur login/register => redirection
-        if (!window.location.pathname.endsWith("/login.html") &&
+        if (!window.location.pathname.endsWith("/Login.html") &&
             !window.location.pathname.endsWith("/register.html") &&
             !token) {
             this.redirectToLogin();
@@ -26,7 +26,7 @@ class View {
     }
 
     redirectToLogin() {
-        window.location.href = 'login.html';
+        window.location.href = 'Login.html';
     }
     // Méthode pour créer le header dynamiquement
     DisplayHeader() {
@@ -54,7 +54,7 @@ class View {
 
         div.appendChild(a);
 
-        if (!window.location.pathname.endsWith("/login.html") && !window.location.pathname.endsWith("/register.html")) {
+        if (!window.location.pathname.endsWith("/Login.html") && !window.location.pathname.endsWith("/register.html")) {
                
             let button = document.createElement("button");
             button.className = "navbar-toggler";
@@ -178,8 +178,8 @@ class View {
 
 
         img.src = "images/Logo-blanc.png";
-        a1.href = "cookies.html";
-        a2.href = "mentions.html";
+        a1.href = "Cookies.html";
+        a2.href = "Mentions.html";
 
         colLogo.appendChild(img);
         colLinks.appendChild(a1);
@@ -197,7 +197,7 @@ class View {
 
     // Déconnexion automatique après timeout
     Disconnect() {
-        if (!window.location.pathname.endsWith("/login.html") &&
+        if (!window.location.pathname.endsWith("/Login.html") &&
             !window.location.pathname.endsWith("/register.html")) {
             localStorage.clear();
             sessionStorage.clear();
