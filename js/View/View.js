@@ -1,12 +1,11 @@
 class View {
     constructor() {
-        this.basePath = "/S3_B2_ReMOVe/docs/";
-
+        
         const token = sessionStorage.getItem("token");
 
         // Si pas de token et pas sur login/register => redirection
-        if (!window.location.pathname.endsWith("/docs/pages/login.html") &&
-            !window.location.pathname.endsWith("/docs/pages/register.html") &&
+        if (!window.location.pathname.endsWith("/pages/login.html") &&
+            !window.location.pathname.endsWith("/pages/register.html") &&
             !token) {
             this.redirectToLogin();
         } else {
@@ -27,7 +26,7 @@ class View {
     }
 
     redirectToLogin() {
-        window.location = this.basePath + 'pages/login.html';
+        window.location = 'pages/login.html';
     }
     // Méthode pour créer le header dynamiquement
     DisplayHeader() {
@@ -47,15 +46,15 @@ class View {
         img.alt="Logo IUT";
         img.style="height:40px; margin-right:10px;";
 
-        a.href= this.basePath + "index.html";
-        img.src= this.basePath + "images/logo.png";
+        a.href= "index.html";
+        img.src= "images/logo.png";
 
         a.appendChild(img);
         a.innerHTML += "RAPPORT IUT";
 
         div.appendChild(a);
 
-        if (!window.location.pathname.endsWith("/docs/pages/login.html") && !window.location.pathname.endsWith("/docs/pages/register.html")) {
+        if (!window.location.pathname.endsWith("/pages/login.html") && !window.location.pathname.endsWith("/pages/register.html")) {
                
             let button = document.createElement("button");
             button.className = "navbar-toggler";
@@ -91,8 +90,8 @@ class View {
             a2.className = "nav-link";
             a2.textContent = "Bibliothèque de rapports";
             
-            a2.href = this.basePath + "pages/visualisationAll.html";
-            a1.href = this.basePath + "pages/depot.html";
+            a2.href = "pages/visualisationAll.html";
+            a1.href = "pages/depot.html";
 
 
             li1.appendChild(a1);
@@ -178,9 +177,9 @@ class View {
         a2.textContent = "Mentions légales";
 
 
-        img.src = this.basePath + "images/Logo-blanc.png";
-        a1.href = this.basePath + "pages/cookies.html";
-        a2.href = this.basePath + "pages/mentions.html";
+        img.src = "images/Logo-blanc.png";
+        a1.href = "pages/cookies.html";
+        a2.href = "pages/mentions.html";
 
         colLogo.appendChild(img);
         colLinks.appendChild(a1);
@@ -198,8 +197,8 @@ class View {
 
     // Déconnexion automatique après timeout
     Disconnect() {
-        if (!window.location.pathname.endsWith("/docs/pages/login.html") &&
-            !window.location.pathname.endsWith("/docs/pages/register.html")) {
+        if (!window.location.pathname.endsWith("/pages/login.html") &&
+            !window.location.pathname.endsWith("/pages/register.html")) {
             localStorage.clear();
             sessionStorage.clear();
             alert("Timeout : vous avez été déconnecté.");
