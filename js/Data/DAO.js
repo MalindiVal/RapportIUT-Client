@@ -3,7 +3,7 @@
  */
 class DAO {
     constructor() {
-        this._adresseAPI = "https://localhost:7112/";
+        this._adresseAPI = "https://rapport-iut-f698f563b27d.herokuapp.com/";
     }
     
     /**
