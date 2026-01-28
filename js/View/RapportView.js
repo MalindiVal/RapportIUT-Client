@@ -6,7 +6,7 @@ class RapportView extends View {
     constructor() {
 
         //initialisation
-        
+        super();
 
         // Récupérer le paramètre "id" de l'URL
         const urlParams = new URLSearchParams(window.location.search);
