@@ -4,8 +4,8 @@ class View {
         const token = sessionStorage.getItem("token");
 
         // Si pas de token et pas sur login/register => redirection
-        if (!window.location.pathname.endsWith("/pages/login.html") &&
-            !window.location.pathname.endsWith("/pages/register.html") &&
+        if (!window.location.pathname.endsWith("/login.html") &&
+            !window.location.pathname.endsWith("/register.html") &&
             !token) {
             this.redirectToLogin();
         } else {
@@ -26,7 +26,7 @@ class View {
     }
 
     redirectToLogin() {
-        window.location = 'pages/login.html';
+        window.location = 'login.html';
     }
     // Méthode pour créer le header dynamiquement
     DisplayHeader() {
@@ -54,7 +54,7 @@ class View {
 
         div.appendChild(a);
 
-        if (!window.location.pathname.endsWith("/pages/login.html") && !window.location.pathname.endsWith("/pages/register.html")) {
+        if (!window.location.pathname.endsWith("/login.html") && !window.location.pathname.endsWith("/register.html")) {
                
             let button = document.createElement("button");
             button.className = "navbar-toggler";
@@ -90,8 +90,8 @@ class View {
             a2.className = "nav-link";
             a2.textContent = "Bibliothèque de rapports";
             
-            a2.href = "pages/visualisationAll.html";
-            a1.href = "pages/depot.html";
+            a2.href = "visualisationAll.html";
+            a1.href = "depot.html";
 
 
             li1.appendChild(a1);
@@ -178,8 +178,8 @@ class View {
 
 
         img.src = "images/Logo-blanc.png";
-        a1.href = "pages/cookies.html";
-        a2.href = "pages/mentions.html";
+        a1.href = "cookies.html";
+        a2.href = "mentions.html";
 
         colLogo.appendChild(img);
         colLinks.appendChild(a1);
@@ -197,8 +197,8 @@ class View {
 
     // Déconnexion automatique après timeout
     Disconnect() {
-        if (!window.location.pathname.endsWith("/pages/login.html") &&
-            !window.location.pathname.endsWith("/pages/register.html")) {
+        if (!window.location.pathname.endsWith("/login.html") &&
+            !window.location.pathname.endsWith("/register.html")) {
             localStorage.clear();
             sessionStorage.clear();
             alert("Timeout : vous avez été déconnecté.");
