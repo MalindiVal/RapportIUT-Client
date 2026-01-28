@@ -90,7 +90,7 @@ class View {
             a2.className = "nav-link";
             a2.textContent = "Bibliothèque de rapports";
             
-            a2.href = "visualisationAll.html";
+            a2.href = "ListeRapport.html";
             a1.href = "depot.html";
 
 
