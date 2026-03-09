@@ -1,4 +1,4 @@
-# RapportIUT‑Client
+# [RapportIUT‑Client](https://malindival.github.io/RapportIUT-Client)
 
 RapportIUT‑Client est le client web d’un projet de gestion et consultation de rapports pour les étudiants de l’IUT. Cette application front-end permet de visualiser, consulter et gérer des rapports en interaction avec un serveur (backend) associé.
 
