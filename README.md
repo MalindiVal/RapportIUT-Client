@@ -2,7 +2,7 @@
 
 RapportIUT‑Client est le client web d’un projet de gestion et consultation de rapports pour les étudiants de l’IUT. Cette application front-end permet de visualiser, consulter et gérer des rapports en interaction avec un serveur (backend) associé.
 
-Le projet du backend se trouve dans ce dépot : [RapportIUT-Client](https://github.com/MalindiVal/RapportIUT-API/)
+Le projet du backend se trouve dans ce dépot : [RapportIUT-API](https://github.com/MalindiVal/RapportIUT-API/)
 
 ## ⚙️ Fonctionnalités
 - ### Connexion / Déconnexion
