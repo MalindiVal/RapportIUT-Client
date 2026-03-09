@@ -29,7 +29,7 @@ RapportIUT-Client/
 └── img/                    # Dossier des images et icônes
 ```
 
-##💻 Technologies utilisées
+## 💻 Technologies utilisées
 - HTML5 / CSS3
 - JavaScript (Vanilla JS)
 
